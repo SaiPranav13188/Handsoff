@@ -1,0 +1,16 @@
+{
+  "name": "handsoff",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gesture Transfer — share an image between two devices with hand gestures",
+  "scripts": {
+    "setup": "npm install && npm install --prefix server && npm install --prefix web",
+    "dev": "node scripts/run.js",
+    "build": "cd web && node node_modules/next/dist/bin/next build",
+    "start": "node scripts/run.js prod",
+    "test": "cd server && node test.js && cd ../web && node --test --experimental-strip-types lib/gesture.test.ts lib/transfer.test.ts"
+  },
+  "dependencies": {
+    "selfsigned": "^2.4.1"
+  }
+}

@@ -1,0 +1,13 @@
+# Render blueprint: one web service serving the Next.js app and the WebSocket
+# relay on the same HTTPS address (needed for the Gallery "Share" menu).
+services:
+  - type: web
+    name: handsoff
+    runtime: node
+    plan: free
+    buildCommand: npm run setup && npm run build
+    startCommand: node scripts/run.js prod
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
