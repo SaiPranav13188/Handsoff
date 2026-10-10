@@ -1,5 +1,13 @@
 # Handsoff — Gesture Transfer
 
+## 📲 Download the Android app
+
+**[⬇ Download Handsoff-v1.0.0.apk](https://github.com/SaiPranav13188/Handsoff/releases/download/v1.0.0/Handsoff-v1.0.0.apk)** (82.5 MB, Android 10+) · [Release notes](https://github.com/SaiPranav13188/Handsoff/releases/tag/v1.0.0)
+
+Install it on two phones, allow "Install unknown apps", pair once with a 👊 fist bump, then show fingers → fist → open hand to send photos. It works phone-to-phone over Bluetooth and Wi-Fi Direct, with no internet needed. See [android/README.md](android/README.md) for all gestures.
+
+---
+
 Move a photo between two devices with your hands. Make a fist over the photo to grab it, open your hand to send it. On the other device, open your palm to receive it. This follows the spec in [Handsoff.md](Handsoff.md).
 
 - **Gesture detection:** MediaPipe Hands, loaded from a CDN and run entirely in the browser. It computes a curl score with EMA smoothing, hysteresis, and a 5-frame streak before a gesture counts.
